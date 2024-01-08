@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "Demo to show how server side rendering architecture works",
   "main": "index.html",
-  "type": "module",
   "scripts": {
-    "dev": "npx live-server src/"
+    "dev": "node src/index.js"
   },
   "author": "Vitor Fonseca",
   "license": "ISC",
-  "devDependencies": {
-    "live-server": "1.2.1"
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "path": "^0.12.7"
   }
 }
