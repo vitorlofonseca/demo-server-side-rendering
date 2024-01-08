@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Client-Side Rendering</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      // Client-side JavaScript rendering
+      document.addEventListener("DOMContentLoaded", async () => {
+        const appDiv = document.getElementById("app");
+
+        const pikachuRequest = await fetch(
+          "https://pokeapi.co/api/v2/pokemon/pikachu"
+        );
+        const pikachu = await pikachuRequest.json();
+
+        appDiv.innerHTML = `<h1>Hello, Client-Side Rendering! You are online and seeing ${pikachu.name}</h1>`;
+      });
+    </script>
+  </body>
+</html>
